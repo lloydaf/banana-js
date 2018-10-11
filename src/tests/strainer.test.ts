@@ -1,7 +1,4 @@
-import {Util} from '../index';
-test("Test Hello World!",()=>{
-  expect(Util.helloWorld()).toBe("Hello World!");
-});
+import '../index';
 
 test("Strain an element from the array", () => {
   let arr = [1, 2, 3, 4, 5];
