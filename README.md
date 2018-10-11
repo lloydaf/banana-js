@@ -2,6 +2,13 @@
 
 A very small library for making development with typescript easier.
 Contains utility functions I wish was there in typescript.
+# Installation
+
+Install using npm
+
+```
+npm install --save standard-utils
+```
 
 # Usage
 
