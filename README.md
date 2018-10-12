@@ -12,15 +12,25 @@ npm install --save standard-utils
 
 # Usage
 
-Import the library as follows:
+Import the whole library as follows:
 
 ```typescript
 import "standard-utils";
 ```
 
-You can now use the utility functions within your application.
+or you can import specific utility functions as follows:
 
-# Strainer
+```typescript
+import "standard-utils/dist/strain"
+```
+
+if you want to use only the strain utility and not anything else.
+
+You can then use the imported utility functions within your application.
+
+# Utils
+
+## Strainer
 
 This is a utility that lets you filter an array for a single element and returns that element.
 If more than one elements remain in the filtered array, the first element is returned.
@@ -44,4 +54,14 @@ let arr = [
 
 let obj = arr.strain(el=>el.name==="blackberry");
 console.log(obj); //{name: "blackberry",type: "fruit"}
+```
+## Distinct
+This is a function that returns the distinct elements within an array.
+
+```typescript
+
+let arr = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+
+let obj = arr.distinct();
+console.log(obj); //[1, 2, 3, 4, 5]
 ```

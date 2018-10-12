@@ -27,4 +27,3 @@ test("Straining objects from an array", () => {
     type: "fruit"
   });
 });
-
