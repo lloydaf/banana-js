@@ -1,4 +1,4 @@
-import "../index";
+import "..";
 
 test("Strain an element from an array", () => {
   let arr = [1, 2, 3, 4, 5];
@@ -22,7 +22,6 @@ test("Straining objects from an array", () => {
   ];
 
   let obj = arr.strain(el => el.name === "blackberry");
-  console.log(obj); //blackberry
   expect(obj).toEqual({
     name: "blackberry",
     type: "fruit"
