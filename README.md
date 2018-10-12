@@ -30,7 +30,7 @@ You can then use the imported utility functions within your application.
 
 # Utils
 
-## Strainer
+## Strain
 
 This is a utility that lets you filter an array for a single element and returns that element.
 If more than one elements remain in the filtered array, the first element is returned.
