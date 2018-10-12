@@ -1,1 +1,1 @@
-import './strainer';
+import './strain';
