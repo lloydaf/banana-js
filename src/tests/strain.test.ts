@@ -1,4 +1,4 @@
-import "../index";
+import "../strain";
 
 test("Strain an element from an array", () => {
   let arr = [1, 2, 3, 4, 5];
@@ -27,4 +27,3 @@ test("Straining objects from an array", () => {
     type: "fruit"
   });
 });
-

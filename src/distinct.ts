@@ -1,9 +1,13 @@
-export {};
-declare global {
-  interface Array<T> {
-    distinct(): T[];
-  }
+declare var Distinct: Array<any>;
+
+declare module "distinct" {
+  export = Distinct;
 }
+
+interface Array<T> {
+  distinct(): T[];
+}
+
 /**@description - This is a function that lets you
  * filter an array to retrieve distinct elements in the array.
  * @returns - The array with distinct elements.
