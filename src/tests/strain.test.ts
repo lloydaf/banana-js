@@ -21,7 +21,7 @@ test("Straining objects from an array", () => {
     }
   ];
 
-  let obj = arr.strain(el => el.name === "blackberry");
+  let obj = Array.prototype.strain(el => el.name === "blackberry",arr);
   expect(obj).toEqual({
     name: "blackberry",
     type: "fruit"

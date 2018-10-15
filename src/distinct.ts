@@ -5,13 +5,14 @@ declare module "distinct" {
 }
 
 interface Array<T> {
-  distinct(): T[];
+  distinct(thisArg?:Array<T>): Array<T>
 }
 
 /**@description - This is a function that lets you
  * filter an array to retrieve distinct elements in the array.
  * @returns - The array with distinct elements.
  */
-Array.prototype.distinct = function<T>(this: T[]): T[] {
-  return this.filter((value, index, array) => array.indexOf(value) === index);
+Array.prototype.distinct = function<T>(thisArg?: Array<T>): Array<T> {
+  let obj = thisArg||this;
+  return obj.filter((value, index, array) => array.indexOf(value) === index);
 };

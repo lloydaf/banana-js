@@ -5,7 +5,7 @@ declare module "strain" {
 }
 
 interface Array<T> {
-  strain(fn: Function): T;
+  strain(fn: Function, thisArg?: Array<T>): T;
 }
 
 /**@description - This is a function that lets you
@@ -13,7 +13,8 @@ interface Array<T> {
  * @param fn - The callback function to be executed.
  * @returns - The element strained
  */
-Array.prototype.strain = function<T>(this: T[], fn: Function): T {
-  let [obj] = this.filter(el => fn(el));
-  return obj;
+Array.prototype.strain = function<T>(fn: Function, thisArg?: Array<T>): T {
+  let obj = thisArg || this;
+  let [response] = obj.filter(el => fn(el));
+  return response;
 };
