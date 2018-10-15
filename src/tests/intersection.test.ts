@@ -1,4 +1,4 @@
-import "../intersection";
+import "../arrays/intersection";
 
 test("Intersection of two number arrays", () => {
   let arr1 = [1, 2, 3, 4, 5];
