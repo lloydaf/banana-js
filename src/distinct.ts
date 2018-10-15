@@ -5,7 +5,7 @@ declare module "distinct" {
 }
 
 interface Array<T> {
-  distinct(thisArg?:Array<T>): Array<T>
+  distinct(thisArg?: Array<T>): Array<T>;
 }
 
 /**@description - This is a function that lets you
@@ -13,6 +13,9 @@ interface Array<T> {
  * @returns - The array with distinct elements.
  */
 Array.prototype.distinct = function<T>(thisArg?: Array<T>): Array<T> {
-  let obj = thisArg||this;
-  return obj.filter((value, index, array) => array.indexOf(value) === index);
+  let obj = thisArg || this;
+  return obj
+    .map(el => JSON.stringify(el))
+    .filter((value, index, array) => array.indexOf(value) === index)
+    .map(el => JSON.parse(el));
 };
