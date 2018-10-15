@@ -8,17 +8,17 @@ interface Array<T> {
  * @param thisArg? - Optional parameter that takes one of the arrays to find intersection of,
  * if using Array.prototype.intersection
  * @param other - Parameter that takes the other array to find intersection of.
- */ 
+ */
+
 Array.prototype.intersection = function<T>(
   other: Array<T>,
   thisArg?: Array<T>
 ): Array<T> {
   let obj = thisArg || this;
-  return obj.filter(
-    one =>
-      other.filter(two => JSON.stringify(one) === JSON.stringify(two)).length >
-      0
-  );
+  return obj
+    .map(el => JSON.stringify(el))
+    .filter(one => other.map(el => JSON.stringify(el)).indexOf(one) > -1)
+    .map(el => JSON.parse(el));
 };
 
 declare const Intersection: Array<any>;
