@@ -1,2 +1,3 @@
-import './strain';
-import './distinct';
+import 'strain';
+import 'distinct';
+import 'intersection';
