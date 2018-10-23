@@ -35,3 +35,22 @@ test("Intersection using Array.prototype", () => {
     { name: "Arya", house: "Stark" }
   ]);
 });
+
+test("Testing with classes", () => {
+  class Fruit {
+    name: string;
+    color: string;
+    constructor(name, color) {
+      this.name = name;
+      this.color = color;
+    }
+  }
+  const orange = new Fruit("Orange", "Orange");
+  const apple = new Fruit("Apple", "Red");
+  const grape = new Fruit("Grape", "Green");
+  const papaya = new Fruit("Papaya", "Orange");
+  const availableFruits = [orange, apple, grape];
+
+  const shoppingList = [orange, papaya];
+  expect(availableFruits.intersection(shoppingList)).toEqual([orange]);
+});
