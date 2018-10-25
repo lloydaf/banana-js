@@ -1,6 +1,6 @@
 {
   "name": "standard-utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A very small library for making development with typescript easier.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
