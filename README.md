@@ -111,3 +111,8 @@ const unavailableItems = ["Gasoline", "Ribbon", "Apple"];
 const newShoppingList = shoppingList.difference(unavailableItems);
 console.log(newShoppingList); //["Toothpaste", "Boots"]
 ```
+
+
+# Licence
+
+Standard MIT Licence.
