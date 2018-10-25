@@ -100,3 +100,14 @@ let starks = [
 ];
 console.log(Array.prototype.intersection(characters, starks)); //[{ name: "Arya", house: "Stark" }]);
 ```
+
+## Difference
+
+This is a function that returns the difference between two arrays.
+
+```typescript
+const shoppingList = ["Apple", "Toothpaste", "Boots"];
+const unavailableItems = ["Gasoline", "Ribbon", "Apple"];
+const newShoppingList = shoppingList.difference(unavailableItems);
+console.log(newShoppingList); //["Toothpaste", "Boots"]
+```
