@@ -3,6 +3,8 @@
 A very small library for making development with typescript easier.
 Contains utility functions I wish was there in typescript.
 
+Note: This library uses monkey patching to extend native prototypes.
+
 # Installation
 
 Install using npm
