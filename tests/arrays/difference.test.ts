@@ -1,4 +1,4 @@
-import "../src/arrays/difference";
+import "../../src/arrays/difference";
 test("difference of primitive array", () => {
   const shoppingList = ["Apple", "Toothpaste", "Boots"];
   const unavailableItems = ["Gasoline", "Ribbon", "Apple"];

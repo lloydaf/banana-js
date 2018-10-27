@@ -1,5 +1,5 @@
 {
-  "name": "banana.js",
+  "name": "@lloydaf/banana-js",
   "version": "1.0.0",
   "description": "A very small library for making development with typescript easier.",
   "main": "dist/index.js",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lloydaf/banana.js.git"
+    "url": "git+https://github.com/lloydaf/banana-js.git"
   },
   "author": "Lloyd Francis",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lloydaf/banana.js/issues"
+    "url": "https://github.com/lloydaf/banana-js/issues"
   },
-  "homepage": "https://github.com/lloydaf/banana.js#readme",
+  "homepage": "https://github.com/lloydaf/banana-js#readme",
   "devDependencies": {
     "@types/jest": "^23.3.3",
     "jest": "^23.6.0",
