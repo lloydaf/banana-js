@@ -1,4 +1,4 @@
-# banana.js
+# banana-js
 
 A very small javascript library having handy functions.
 
@@ -11,7 +11,7 @@ Used to lure monkeys and patch them.
 Install using npm
 
 ```
-npm install --save banana.js
+npm install --save @lloydaf/banana-js
 ```
 
 # Usage
@@ -19,13 +19,13 @@ npm install --save banana.js
 Import the whole library as follows:
 
 ```typescript
-import "banana.js";
+import "@lloydaf/banana-js";
 ```
 
 or you can import specific utility functions as follows:
 
 ```typescript
-import "banana.js/dist/strain";
+import "@lloydaf/banana-js/dist/strain";
 ```
 
 if you want to use only the strain utility and not anything else.
