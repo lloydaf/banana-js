@@ -1,16 +1,17 @@
-# standard-utils
+# banana.js
 
-A very small library for making development with typescript easier.
-Contains utility functions I wish was there in typescript.
+A very small javascript library having handy functions.
 
-Note: This library uses monkey patching to extend native prototypes.
+Written in Typescript.
+
+Used to lure monkeys and patch them.
 
 # Installation
 
 Install using npm
 
 ```
-npm install --save standard-utils
+npm install --save banana.js
 ```
 
 # Usage
@@ -18,13 +19,13 @@ npm install --save standard-utils
 Import the whole library as follows:
 
 ```typescript
-import "standard-utils";
+import "banana.js";
 ```
 
 or you can import specific utility functions as follows:
 
 ```typescript
-import "standard-utils/dist/strain";
+import "banana.js/dist/strain";
 ```
 
 if you want to use only the strain utility and not anything else.
