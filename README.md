@@ -36,6 +36,10 @@ You can then use the imported utility functions within your application.
 
 Further Documentation can be found inside `src/<folder>`
 
+# Contribution / Bug Report
+
+Please feel free to contribute by creating pull requests. In case of bugs, please raise an issue or email me at `lloydaf@gmail.com`.
+
 # Licence
 
 Standard MIT Licence.
