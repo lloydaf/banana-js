@@ -1,6 +1,8 @@
 declare module "contains" {
-
+  export = Contains;
 }
+
+declare var Contains: Array<any>;
 
 interface Array<T> {
   containsAll(arr: Array<T>, thisArg?: Array<T>): Boolean;
