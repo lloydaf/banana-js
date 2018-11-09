@@ -21,21 +21,20 @@ String.prototype.substringsIn = function(
   let substrings = new Array<String>();
   let obj: String;
   thisArg ? (obj = thisArg) : (obj = this);
-  obj = obj.trim();
-  str = str.trim();
   for (let i = 0; i < obj.length; ++i) {
     let char: string = obj[i];
     let strCopy = str.slice();
     while (strCopy.indexOf(char) > -1) {
       let substring = "";
       let indexOne = Number(i);
-      let indexTwo = Number(str.indexOf(char));
+      let indexTwo = Number(strCopy.indexOf(char));
       while (
         indexOne < obj.length &&
         indexTwo < strCopy.length &&
         obj[indexOne] === strCopy[indexTwo]
       ) {
         substring += obj[indexOne];
+        substrings = [...substrings, substring];
         ++indexOne;
         ++indexTwo;
       }
