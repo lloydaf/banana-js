@@ -1,4 +1,6 @@
-# Substrings In
+# Utils
+
+## Substrings In
 
 A function that returns a list of substrings found in two strings.
 

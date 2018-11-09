@@ -78,3 +78,14 @@ const unavailableItems = ["Gasoline", "Ribbon", "Apple"];
 const newShoppingList = shoppingList.difference(unavailableItems);
 console.log(newShoppingList); //["Toothpaste", "Boots"]
 ```
+
+## Contains All
+
+This is a function that tells you if an array contains all the elements in another array.
+
+```typescript
+let arr1 = ["Hello", "my", "name", "is", "Lloyd"];
+let arr2 = ["name", "is"];
+console.log(arr1.containsAll(arr2)); //true
+console.log(arr2.containsAll(arr1)); //false
+```
