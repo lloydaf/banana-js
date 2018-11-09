@@ -4,7 +4,7 @@ A very small javascript library having handy functions.
 
 Written in Typescript.
 
-Used to lure monkeys and patch them.
+Might be used to lure monkeys and patch them.
 
 # Installation
 
