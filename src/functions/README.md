@@ -2,7 +2,7 @@
 
 ## Pipe
 
-This is a function that lets you chain functions together and pass the result of one function to the next function in the pipe.
+This is a function that lets you chain functions together and pass the result of one function as the first argument to the next function in the pipe.
 
 ```typescript
 function addOne(num: number) {
@@ -18,8 +18,26 @@ function square(num: number) {
 }
 
 const num = 1;
-const result = addOne(num).pipe(addTwo).pipe(square);
-console.log(result) // 16
+const result = addOne(num)
+  .pipe(addTwo)
+  .pipe(square);
+console.log(result); // 16
+```
+
+If you have functions taking multiple arguments, you can add them as additional arguments after the function.
+
+```typescript
+function multiply(...args: Array<number>) {
+  return args.reduce((a, b) => a * b, 1);
+}
+
+const num = 1;
+const result = addOne(num).pipe(
+  multiply,
+  2,
+  3
+);
+console.log(result); //12
 ```
 
 ## Pipe All
@@ -40,6 +58,6 @@ function square(num: number) {
 }
 
 const num = 1;
-const result = addOne(num).pipeAll(addTwo,square);
-console.log(result) // 16
+const result = addOne(num).pipeAll(addTwo, square);
+console.log(result); // 16
 ```
