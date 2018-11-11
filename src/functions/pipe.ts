@@ -13,9 +13,7 @@ interface Object {
  * @returns - Returns the resultant object of the operation after piping through the function.
  */
 Object.prototype.pipe = function(fn: Function,...args:any): Object {
-  let obj = this;
-  args = [obj,...args];
-  return fn.apply(fn,args);
+  return fn.apply(fn,[this,...args]);
 };
 
 
