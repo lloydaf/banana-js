@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/%40lloydaf%2Fbanana-js.svg)](https://badge.fury.io/js/%40lloydaf%2Fbanana-js)
 # banana-js
 
 A very small javascript library having handy functions.
