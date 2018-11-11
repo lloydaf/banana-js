@@ -7,15 +7,15 @@ Written in Typescript.
 
 Might be used to lure monkeys and patch them.
 
-# Installation
+## Installation
 
 Install using npm
 
 ```
-npm install --save @lloydaf/banana-js
+$ npm install --save @lloydaf/banana-js
 ```
 
-# Usage
+## Usage
 
 Import the whole library as follows:
 
@@ -33,14 +33,17 @@ if you want to use only the strain utility and not anything else.
 
 You can then use the imported utility functions within your application.
 
-# Documentation
+## Documentation
 
 Further Documentation can be found inside `src/<folder>`
 
-# Contribution / Bug Report
+## Contribution / Bug Report
 
 Please feel free to contribute by creating pull requests. In case of bugs, please raise an issue or email me at `lloydaf@gmail.com`.
 
-# Licence
+## Licence
 
-Standard MIT Licence.
+[Standard MIT Licence].
+
+
+[Standard MIT Licence]: https://github.com/lloydaf/banana-js/blob/master/LICENSE.md
