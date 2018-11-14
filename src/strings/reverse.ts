@@ -10,7 +10,8 @@ interface String {
 
 /**
  * A function that reverses a string
- * @param thisArg - Optional argument that refers to the string to be reversed
+ * @param thisArg - Optional argument that refers to the string to be reversed,
+ * to be passed if using String.prototype.reverse()
  */
 String.prototype.reverse = function(thisArg?: String): String {
   let str: String;
