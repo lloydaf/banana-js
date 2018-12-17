@@ -35,7 +35,8 @@ test("Pipe All with two single arity functions", () => {
 });
 
 test("Pipe All with two single/multiple arity functions", () => {
-  expect(addOne(1).pipeAll([multiply,3,4], [square])).toEqual(576);
+  expect(addOne(1).pipeAll([multiply, 3, 4], [square])).toEqual(576);
+  expect(addOne(1).pipeAll([multiply, 2, 3], [square])).toEqual(144);
 });
 
 test("Piping methods with multiple arity", () => {
@@ -67,5 +68,5 @@ test("Piping methods with arity two", () => {
       2,
       3
     )
-  ).toEqual(0);//ignores additional arguments
+  ).toEqual(0); //ignores additional arguments
 });

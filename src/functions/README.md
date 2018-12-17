@@ -42,15 +42,15 @@ console.log(result); //12
 
 ## Pipe All
 
-This is a function that lets you chain functions together with a single function call, thus removing the need to use multiple `pipe()` statements. Pipes the functions in the order in which they are passed to the function.
+This is a function that lets you chain functions together with a single function call, thus removing the need to use multiple `pipe()` statements. Pipes the functions in the order in which they are passed to the function, passing the result of the previous function as the first argument to the next function.
 
 ```typescript
 function addOne(num: number) {
   return num + 1;
 }
 
-function addTwo(num: number) {
-  return num + 2;
+function multiply(...args: Array<number>) {
+  return args.reduce((a, b) => a * b, 1);
 }
 
 function square(num: number) {
@@ -58,6 +58,6 @@ function square(num: number) {
 }
 
 const num = 1;
-const result = addOne(num).pipeAll(addTwo, square);
-console.log(result); // 16
+const result = addOne(num).pipeAll([multiply,2,3], [square]);
+console.log(result); // 144
 ```

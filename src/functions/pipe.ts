@@ -12,21 +12,20 @@ interface Object {
  * @param args - Additional arguments that the function needs
  * @returns - Returns the resultant object of the operation after piping through the function.
  */
-Object.prototype.pipe = function(fn: Function,...args:any): Object {
-  return fn.apply(fn,[this,...args]);
+Object.prototype.pipe = function(fn: Function, ...args: any): Object {
+  return fn.apply(fn, [this, ...args]);
 };
 
-
 /**
- * @param arguments - Takes in multiple comma separated functions to pipe one after the other, 
- * passing the result of the previous function as the first argument to the next function.
+ * @param arguments - Takes in multiple comma separated functions to pipe one after the other,
+ * passing the result of the previous function as the first argument to the next function.ß
  * @returns - Returns the resultant object after piping through all the functions.
  */
 Object.prototype.pipeAll = function(...fns: Array<any>): Object {
   let obj = this;
-  for(let i = 0; i< fns.length;++i){
+  for (let i = 0; i < fns.length; ++i) {
     const [func, ...args] = fns[i];
-    obj = func(obj,...args);
+    obj = func(obj, ...args);
   }
   return obj;
 };
