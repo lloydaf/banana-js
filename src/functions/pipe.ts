@@ -4,7 +4,7 @@ declare module "pipe" {
 }
 interface Object {
   pipe(fn: Function, ...args: Array<any>): Object;
-  pipeAll(...arguments: Array<Function>): Object;
+  pipeAll(...fns: Array<any>): Object;
 }
 /**
  * Function that takes in a function and pipes the object as the first argument to the function
@@ -18,13 +18,15 @@ Object.prototype.pipe = function(fn: Function,...args:any): Object {
 
 
 /**
- * @param arguments - Takes in multiple comma separated functions to pipe one after the other
+ * @param arguments - Takes in multiple comma separated functions to pipe one after the other, 
+ * passing the result of the previous function as the first argument to the next function.
  * @returns - Returns the resultant object after piping through all the functions.
  */
-Object.prototype.pipeAll = function(): Object {
+Object.prototype.pipeAll = function(...fns: Array<any>): Object {
   let obj = this;
-  for (let i = 0; i < arguments.length; ++i) {
-    obj = arguments[i](obj);
+  for(let i = 0; i< fns.length;++i){
+    const [func, ...args] = fns[i];
+    obj = func(obj,...args);
   }
   return obj;
 };

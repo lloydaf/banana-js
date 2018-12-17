@@ -31,7 +31,11 @@ test("Multiple Composition, single arity functions", () => {
 });
 
 test("Pipe All with two single arity functions", () => {
-  expect(addOne(1).pipeAll(addTwo, square)).toEqual(16);
+  expect(addOne(1).pipeAll([addTwo], [square])).toEqual(16);
+});
+
+test("Pipe All with two single/multiple arity functions", () => {
+  expect(addOne(1).pipeAll([multiply,3,4], [square])).toEqual(576);
 });
 
 test("Piping methods with multiple arity", () => {
