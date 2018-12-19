@@ -1,5 +1,3 @@
-import 'strain';
-import 'distinct';
-import 'intersection';
-import 'difference';
-import 'pipe';
+import "./arrays/arrays";
+import "./functions/functions";
+import "./strings/strings";
