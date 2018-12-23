@@ -17,7 +17,7 @@ interface Array<T> {
 Array.prototype.distinct = function<T>(thisArg?: Array<T>): Array<T> {
   let obj = thisArg || this;
   return obj
-    .map(el => JSON.stringify(el))
-    .filter((value, index, array) => array.indexOf(value) === index)
-    .map(el => JSON.parse(el));
+    .map((el:T) => JSON.stringify(el))
+    .filter((value:string, index:number, array:Array<string>) => array.indexOf(value) === index)
+    .map((el:string) => JSON.parse(el));
 };

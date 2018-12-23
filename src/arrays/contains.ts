@@ -13,14 +13,13 @@ Array.prototype.containsAll = function<T>(
   thisArg?: Array<T>
 ): Boolean {
   let status: Boolean = true;
-  let obj;
-  thisArg ? (obj = thisArg) : (obj = this);
-  obj = obj.map(el => JSON.stringify(el));
+  const obj: Array<T> = this || thisArg;
+  const objStr: Array<String> = obj.map((el: T) => JSON.stringify(el));
   arr
     .map(el => JSON.stringify(el))
     .forEach(el => {
       if (!status) return;
-      else if (obj.indexOf(el) === -1) status = false;
+      else if (objStr.indexOf(el) === -1) status = false;
     });
   return status;
 };

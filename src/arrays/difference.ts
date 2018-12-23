@@ -15,9 +15,9 @@ Array.prototype.difference = function<T>(
 ): Array<T> {
   let obj = thisArg || this;
   return obj
-    .map(el => JSON.stringify(el))
-    .filter(one => other.map(el => JSON.stringify(el)).indexOf(one) === -1)
-    .map(el => JSON.parse(el));
+    .map((el:T) => JSON.stringify(el))
+    .filter((one:string) => other.map(el => JSON.stringify(el)).indexOf(one) === -1)
+    .map((el:string) => JSON.parse(el));
 };
 
 declare module "difference" {
