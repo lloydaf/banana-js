@@ -13,7 +13,7 @@ Array.prototype.containsAll = function<T>(
   thisArg?: Array<T>
 ): Boolean {
   let status: Boolean = true;
-  const obj: Array<T> = this || thisArg;
+  const obj: Array<T> = thisArg || this;
   const objStr: Array<String> = obj.map((el: T) => JSON.stringify(el));
   arr
     .map(el => JSON.stringify(el))

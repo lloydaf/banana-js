@@ -16,7 +16,7 @@ interface Number {
  * @returns - Prime factors of a number in an array.
  */
 Number.prototype.primeFactors = function(thisArg?: number): Array<number> {
-  let obj = this || thisArg;
+  let obj = thisArg || this;
   const factorArray = new Array<number>();
   if (obj % 2 === 0) {
     while (obj % 2 === 0) obj /= 2;

@@ -13,7 +13,7 @@ Array.prototype.difference = function<T>(
   other: Array<T>,
   thisArg?: Array<T>
 ): Array<T> {
-  let obj = thisArg || this;
+  const obj: Array<T> = thisArg || this;
   return obj
     .map((el:T) => JSON.stringify(el))
     .filter((one:string) => other.map(el => JSON.stringify(el)).indexOf(one) === -1)

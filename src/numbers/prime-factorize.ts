@@ -18,7 +18,7 @@ declare module "prime-factorize" {
  * To be used if using Number.prototype.primeFactorize()
  */
 Number.prototype.primeFactorize = function(thisArg?: number): Object {
-  let obj = this || thisArg;
+  let obj = thisArg || this;
   const factorMap = {};
   if (obj % 2 === 0) {
     factorMap["2"] = 0;
