@@ -17,8 +17,9 @@ This is a function that performs prime factorization on a number and returns the
 prime factors being the key and the number of times the prime factor appears in the factorization as the value.
 
 ```typescript
+import {primeFactorize} from '@lloydaf/banana-js/dist/numbers/prime-factorize';
 const num: Number = 20;
-const primeFactorMap = num.primeFactorize();
+const primeFactorMap = primeFactorize(num);
 console.log(primeFactorMap); //{"2":2,"5":1} (because 20 = 2*2*5)
 ```
 

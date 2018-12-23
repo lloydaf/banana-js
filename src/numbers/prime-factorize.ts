@@ -1,24 +1,13 @@
-interface Number {
-  primeFactorize(thisArg?: number): Object;
-}
-
-declare const PrimeFactorize: Number;
-
-declare module "prime-factorize" {
-  export = PrimeFactorize;
-}
-
+export {primeFactorize}
 /**
  * @description - This is a function that returns the prime factors of a number in an object.
  *
  * @returns - An object with the prime factors as a key
  * and the number of times the prime factors occur in the factorization as its value
  *
- * @param thisArg - An optional paramenter to passed that refers to the number whos prime factors are to be found.
- * To be used if using Number.prototype.primeFactorize()
+ * @param thisArg - Refers to the number whos prime factors are to be found.
  */
-Number.prototype.primeFactorize = function(thisArg?: number): Object {
-  let obj = thisArg || this;
+const primeFactorize = function(obj: number): Object {
   const factorMap = {};
   if (obj % 2 === 0) {
     factorMap["2"] = 0;

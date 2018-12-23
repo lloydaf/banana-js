@@ -1,4 +1,4 @@
-import "./prime-factorize";
+import {primeFactorize} from "./prime-factorize";
 /**
  * @description - This function returns the LCM of multiple numbers.
  * @param args - The numbers whos LCM is to be found.
@@ -6,7 +6,7 @@ import "./prime-factorize";
  */
 const lcm = (...args: Array<number>) => {
   const lcmMap = args
-    .map(number => number.primeFactorize())
+    .map(number => primeFactorize(number))
     .reduce((a, b) => {
       Object.keys(b).forEach(key => {
         if (!a[key]) a[key] = b[key];
