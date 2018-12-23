@@ -1,9 +1,9 @@
-import "../../src/arrays/intersection";
+import {intersection} from "../../src/arrays/intersection";
 
 test("Intersection of two number arrays", () => {
   let arr1 = [1, 2, 3, 4, 5];
   let arr2 = [2, 3, 4, 5, 6];
-  expect(Array.prototype.intersection(arr2, arr1)).toEqual([2, 3, 4, 5]);
+  expect(intersection(arr2, arr1)).toEqual([2, 3, 4, 5]);
 });
 
 test("Intersection using Array.prototype", () => {
@@ -31,7 +31,7 @@ test("Intersection using Array.prototype", () => {
       house: "Stark"
     }
   ];
-  expect(Array.prototype.intersection(characters, starks)).toEqual([
+  expect(intersection(characters, starks)).toEqual([
     { name: "Arya", house: "Stark" }
   ]);
 });
@@ -52,5 +52,5 @@ test("Testing with classes", () => {
   const availableFruits = [orange, apple, grape];
 
   const shoppingList = [orange, papaya];
-  expect(availableFruits.intersection(shoppingList)).toEqual([orange]);
+  expect(intersection(availableFruits,shoppingList)).toEqual([orange]);
 });

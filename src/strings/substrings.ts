@@ -8,7 +8,7 @@ interface String {
   substringsIn(str: String, thisArg?: String): Array<String>;
 }
 
-/**This function returns a list of substrings found between in two strings.
+/**@description - This function returns a list of substrings found between in two strings.
  * @param str - The string to find substrings in
  * @param thisArg? - An optional argument that acts as the string to compare with
  * str, if using String.prototype.substringsIn

@@ -1,28 +1,19 @@
-interface Array<T> {
-  intersection(other: Array<T>, thisArg?: Array<T>): Array<T>;
-}
 
 /**@description - This is a function that lets you
  * find the intersection of two arrays.
  * @returns - The intersection of the arrays.
- * @param thisArg? - Optional parameter that takes one of the arrays to find intersection of,
- * if using Array.prototype.intersection
- * @param other - Parameter that takes the other array to find intersection of.
+ * @param first - Parameter that takes the first array to find intersection of.
+ * @param second - Parameter that takes the second array to find intersection of.
  */
 
-Array.prototype.intersection = function<T>(
-  other: Array<T>,
-  thisArg?: Array<T>
+const intersection = function<T>(
+  first: Array<T>,
+  second?: Array<T>
 ): Array<T> {
-  const obj: Array<T> = thisArg || this;
-  return obj
+  return first
     .map((el:T) => JSON.stringify(el))
-    .filter((one:string) => other.map(el => JSON.stringify(el)).indexOf(one) > -1)
+    .filter((one:string) => second.map(el => JSON.stringify(el)).indexOf(one) > -1)
     .map((el:string) => JSON.parse(el));
 };
 
-declare const Intersection: Array<any>;
-
-declare module "intersection" {
-  export = Intersection;
-}
+export {intersection};

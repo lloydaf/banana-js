@@ -9,7 +9,7 @@ declare module "prime-factorize" {
 }
 
 /**
- * This is a function that returns the prime factors of a number in an object.
+ * @description - This is a function that returns the prime factors of a number in an object.
  *
  * @returns - An object with the prime factors as a key
  * and the number of times the prime factors occur in the factorization as its value

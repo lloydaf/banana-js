@@ -9,7 +9,7 @@ interface Number {
 }
 
 /**
- * A function that returns the prime factors of a number in an array.
+ * @description - A function that returns the prime factors of a number in an array.
  * @param thisArg - An optional parameter that refers to the number whos prime factors are to be found,
  * to be used if using Number.prototype.primeFactors()
  *

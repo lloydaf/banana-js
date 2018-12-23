@@ -41,6 +41,8 @@ console.log(obj); //[1, 2, 3, 4, 5]
 This is a function that returns the intersection of two arrays
 
 ```typescript
+import {intersection} from '@lloydaf/banana-js/dist/arrays/intersection';
+
 let characters = [
   {
     name: "Cersei",
@@ -65,7 +67,7 @@ let starks = [
     house: "Stark"
   }
 ];
-console.log(Array.prototype.intersection(characters, starks)); //[{ name: "Arya", house: "Stark" }]);
+console.log(intersection(characters, starks)); //[{ name: "Arya", house: "Stark" }]);
 ```
 
 ## Difference
