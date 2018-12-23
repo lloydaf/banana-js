@@ -1,4 +1,4 @@
-import "./contains";
+import "./contains-all";
 import "./difference";
 import "./distinct";
 import "./intersection";
