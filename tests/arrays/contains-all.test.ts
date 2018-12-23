@@ -1,4 +1,4 @@
-import "../../src/arrays/contains";
+import "../../src/arrays/contains-all";
 
 test("Simple Test", () => {
   let arr1 = ["Hello", "my", "name", "is", "Lloyd"];
