@@ -36,3 +36,17 @@ console.log(lcmVal); //10
 const lcmValTwo = lcm(10,15);
 console.log(lcmValTwo); //30
 ```
+
+##IS PRIME
+
+This is a function that tells you if a number is prime or not.
+
+```typescript
+import {isPrime} from '@lloydaf/banana-js/dist/numbers/is-prime';
+
+console.log(isPrime(2)); //true
+
+console.log(isPrime(99)); //false
+
+console.log(isPrime(337)); //true
+```
