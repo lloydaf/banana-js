@@ -1,9 +1,9 @@
 [![npm version](https://badge.fury.io/js/%40lloydaf%2Fbanana-js.svg)](https://badge.fury.io/js/%40lloydaf%2Fbanana-js)
 # banana-js
 
-A very small javascript library having handy functions.
+A very small TypeScript library having handy functions.
 
-Written in Typescript.
+Written in TypeScript.
 
 Might be used to lure monkeys and patch them.
 
