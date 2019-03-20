@@ -1,6 +1,6 @@
-#Utils
+# Utils
 
-##Prime Factors
+## Prime Factors
 
 This is a function that returns the prime factors of a number as an array.
 
@@ -11,7 +11,7 @@ const factors = num.primeFactors();
 console.log(factors); //[2,5]
 ```
 
-##Prime Factorize
+## Prime Factorize
 
 This is a function that performs prime factorization on a number and returns the prime factors of the number as an object, with the
 prime factors being the key and the number of times the prime factor appears in the factorization as the value.
@@ -23,7 +23,7 @@ const primeFactorMap = primeFactorize(num);
 console.log(primeFactorMap); //{"2":2,"5":1} (because 20 = 2*2*5)
 ```
 
-##LCM
+## LCM
 
 This is a function that returns the LCM(lowest common multiple) of a collection of numbers.
 
@@ -37,7 +37,7 @@ const lcmValTwo = lcm(10,15);
 console.log(lcmValTwo); //30
 ```
 
-##IS PRIME
+## IS PRIME
 
 This is a function that tells you if a number is prime or not.
 
